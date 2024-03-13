@@ -1,0 +1,766 @@
+/*
+Theme Name: Eventrox
+Theme URI: https://shtheme.com/demosd/eventrox
+Author: Shtheme
+Author URI: https://themeforest.net/user/shtheme
+Description: Eventrox is a modern WordPress Theme designed for Conference, Event, Meetup, Seminar, Exhibition, Congress, Meeting, Business Conference, Event Management, Meet Up websites.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Text Domain: eventrox
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* ========TABLE OF CONTENTS==========
+00. Body, links, hgroup, paragraphs, general styles
+01. Fixed header & Navigation
+02. Section Intro (Home)
+03. Section About
+04. Section Resume
+05. Section Portfolio
+06. Section Blog
+07. Section Contact
+08. Footer
+09. Loader
+10. Responsive design
+
+/*--------------------------------------------------
+    00. Body, links, hgroup, paragraphs, general styles
+---------------------------------------------------*/
+
+
+
+
+p{
+    font-family: 'Poppins', sans-serif;
+}
+.blog-single .lower-content blockquote p:first-child {
+    position: initial;
+    margin-bottom: 0px;
+}
+.blog-single .lower-content blockquote p+p+p{
+    margin-bottom: 0px;
+}
+.blog-single .post-share-options .tags a {
+    margin-right: 5px;
+}
+.post-info li .far.fa-user+a[rel="author"] {
+    color: #777777;
+    text-transform: capitalize;
+}
+.sidebar-page-container .sidebar-side .sidebar-widget.widget_categories ul li {
+	text-align: right;
+    margin-bottom: 15px;
+}
+.sidebar-page-container .sidebar-side .sidebar-widget.widget_categories ul li a {
+	float: left;
+    position: relative;
+    display: block;
+    color: #333333;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+.sidebar-page-container .sidebar-side .widget.sidebar-widget.widget_tag_cloud ul.wp-tag-cloud li a{
+	position: relative;
+    float: left;
+    padding: 5px;
+    margin: 0 10px 10px 0;
+    color: #333333;
+    text-align: center;
+    font-size: 16px !important;
+    line-height: 20px;
+    background: none;
+    font-weight: 400;
+    border-bottom: 2px solid #dddddd;
+    background-color: #ffffff;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+.sidebar-page-container .sidebar-side .widget.sidebar-widget.widget_tag_cloud ul.wp-tag-cloud li a{
+	position: relative;
+    padding: 10px 20px;
+    line-height: 20px;
+    border: 1px solid #ec167f;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 400;
+    text-align: center;
+    background-color: #ec167f;
+    overflow: hidden;
+}
+.sidebar-page-container .sidebar-side .widget.sidebar-widget.widget_tag_cloud ul.wp-tag-cloud li a:hover{
+    color: #ec167f;
+    background-color: #fff;
+}
+#respond.comment-respond .comment-form .form-group .submit {
+    color: #ffffff;
+    background-color: transparent;
+}
+#respond.comment-respond .comment-form .form-group input[type="submit"] {
+    font-size: 15px;
+    padding: 0px 0px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    -webkit-appearance: none;
+}
+#respond.comment-respond .comment-form .form-group .btn-style-one:hover input[type="submit"]{
+	color: #ec167f;
+}
+#respond.comment-respond .comment-form .comment-form-cookies-consent {
+	margin-left: 15px;
+	display: none;
+}
+#respond.comment-respond .comment-form >h3.comment-reply-title {
+	display: inline-block;
+    font-size: 28px;
+    line-height: 1.2em;
+    color: #222222;
+    font-weight: 500;
+    position: relative;
+    margin-bottom: 40px;
+}
+.comment-respond .logged-in-as {
+    margin-left: 15px;
+}
+#wp-comment-cookies-consent {
+    margin-right: 5px;
+}
+.styled-pagination li span {
+    position: relative;
+    display: block;
+    line-height: 50px;
+    font-size: 18px;
+    height: 50px;
+    width: 50px;
+    color: #222222;
+    font-weight: 500;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-bottom: 2px solid #ec167f;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+.styled-pagination li span.current {
+    background-color: #ec167f;
+    color: #ffffff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.10);
+}
+.comments-area .comment .comment-reply-link .btn_title {
+    position: inherit;
+}
+.comments-area .comment .text >p {
+    margin-bottom: 0px;
+}
+.elementor-column-gap-default>.elementor-row>.elementor-column>.elementor-element-populated {
+    padding: 0px !important;
+}
+.register-form .form-group .icon {
+    line-height: 75px;
+}
+input.btn-style-four:hover {
+    border: 1px solid #24293d;
+    background-color: #fff;
+    color: #24293d;
+}
+.register-section .register-form .wpcf7-form input.btn-style-four {
+    border: 1px solid #24293d;
+}
+.register-section .register-form .wpcf7-form input.btn-style-four:hover {
+    border: 1px solid #ec167f;
+}
+.subscribe-section .newsletter-form .form-group input[type="text"], .subscribe-section .newsletter-form .form-group input[type="email"] {
+    display: initial;
+}
+.subscribe-section .newsletter-form .form-group .theme-btn .btn-title >input {
+    background: transparent;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+}
+.subscribe-section .newsletter-form .form-group .theme-btn:hover .btn-title >input {
+    color: #1c94d2;
+}
+.newsletter-section .subscribe-form div.wpcf7 .ajax-loader {
+    display: none;
+}
+.newsletter-section .subscribe-form div.wpcf7 .wpcf7-form-control.wpcf7-submit.theme-btn{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+.gallery-item .overlay-box a span.fa-expand-arrows-alt {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+.event-info-tabs .tabs-content h4 .icon {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+.about-section-two .about-block .icon {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+.wpcf7-form-control.wpcf7-submit.theme-btn{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+.icon.fa.fa-chair {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+.icon.fa.fa-user-alt {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+.coming-soon .emailed-form .form-group br {
+    display: none;
+}
+.coming-soon .emailed-form .form-group .ajax-loader {
+    display: none;
+}
+
+.fluid-section-one .content-column h3 {
+    position: relative;
+    font-size: 40px;
+    line-height: 1.2em;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 28px;
+}
+.pricing-block-three h4.price {
+    position: relative;
+    display: block;
+    font-size: 100px;
+    line-height: .9em;
+    color: #ec167f;
+    font-weight: 200;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+}
+.event-detail .speaker-info .name {
+    text-transform: capitalize;
+}
+.faq-form-section .btn-title[value="Get A Quote"].theme-btn.btn-style-one:hover {
+    background-color: #fff;
+    color: #ec167f;
+}
+.faq-form-section .btn-title[value="Get A Quote"]+ .ajax-loader {
+    margin-right: -20px;
+}
+.coming-soon .emailed-form .form-group input[type="submit"], .coming-soon .emailed-form button {
+    font-size: 24px;
+    font-weight: 900;
+    top: 8px;
+}
+.icon.fa.fa-map-marker-alt {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+.wpcf7-form-control.wpcf7-submit.theme-btn:hover {
+    background-color: #fff;
+    color: #ec167f;
+}
+.ticket-form span.wpcf7-list-item {
+    margin-left: 0px;
+}
+.dropdown-menu {
+    position: relative;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: none;
+    min-width: 10rem;
+    padding: 0rem 0;
+    margin: .125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+}
+@media (min-width: 767px){
+    .speaker-detail .fluid-section-one .image-column {
+        position: absolute;
+    }
+}
+@media (max-width: 767px){
+    .speaker-detail .fluid-section-one .image-column {
+        margin-bottom: 0px;
+    }
+    .speaker-detail .fluid-section-one .image-column .image-box {
+        position: relative;
+        padding-right: 0px;
+    }
+    .speaker-detail .fluid-section-one .image-column .image-box .image {
+        border: 0px solid #ffffff;
+    }
+}
+.page-template-home-5 .main-header.header-style-two.fixed-header .main-box {
+    background-color: #101130;
+}
+.page-template-home-5 .main-header.header-style-two.alternate-two.fixed-header .main-menu .navigation > li > a {
+    color: #fff;
+}
+@media only screen and (max-width: 1139px){
+    .instagram-widget .outer .image {
+        width: 33.3333%;
+    }
+    .instagram-widget .outer {
+        width: 257px;
+    }
+}
+.page-template-coming-soon .elementor-section.elementor-section-boxed>.elementor-container {
+    max-width: 100%;
+}
+.logged-in #respond.comment-respond .comment-form >h3.comment-reply-title {
+    margin-bottom: 10px;
+}
+.comment-form .form-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+@media only screen and (max-width: 767px){
+.clients-section .sponsors-outer .client-block .image-box {
+    max-width: 400px;
+    margin: 0 auto;
+}
+}
+.register-form .form-group:nth-child(4) {
+    margin-bottom: 40px;
+}
+.register-form div.wpcf7 .ajax-loader {
+    float: left;
+}
+.scroll-to-top {
+    bottom: 9px;
+}
+.list-style-two li {
+    color: #222222;
+}
+.event-detail .content-box p {
+    color: #222222;
+}
+.sec-title .text {
+    color: #222222;
+}
+.list-style-one li {
+    color: #222222;
+}
+.feature-block-two .text {
+    color: #222222;
+}
+.schedule-block .text {
+    color: #222222;
+}
+.pricing-block .features li {
+    color: #222222;
+}
+.feature-block .text {
+    color: #222222;
+}
+.fun-fact-section .counter-column:nth-child(4n + 3) .counter-title {
+    color: #8e7cd8;
+}
+.pricing-block-two .features li {
+    color: #222222;
+}
+.event-info-tabs .tabs-content .text {
+    color: #222222;
+}
+.event-info-tabs .tabs-content .info-list li {
+    color: #222222;
+}
+.testimonial-block .text {
+    color: #222222;
+}
+.about-section-two .about-block .text {
+    color: #222222;
+}
+.feature-block-three .text {
+    color: #222222;
+}
+.accordion-box .block .content .text {
+    color: #222222;
+}
+.event-info-tabs .tabs-content .info-list li a {
+    color: #222222;
+}
+.pricing-block-three .features li {
+    color: #222222;
+}
+.pricing-block-three .title {
+    color: #222222;
+}
+.speaker-detail .info-column p {
+    color: #222222;
+}
+.speaker-detail .info-column p {
+    color: #222222;
+}
+.buy-ticket p {
+    color: #222222;
+}
+.buy-ticket .support-box p {
+    color: #222222;
+}
+.news-block .text {
+    color: #222222;
+}
+.post-info li .far.fa-user+a[rel="author"] {
+    color: #222222;
+}
+.news-block .post-info li {
+    color: #222222;
+}
+.blog-single .lower-content p {
+    color: #222222;
+}
+.blog-single .lower-content blockquote p {
+    color: #222222;
+}
+.comments-area .comment .text >p {
+    color: #222222;
+}
+@media only screen and (max-width: 599px){
+.banner-carousel .content-box h2 {
+    font-size: 36px;
+}
+}
+.header-top-two .top-left .links li a .icon {
+    top: 3px;
+}
+.main-header .outer-box .btn-box a {
+    border: 1px solid #ec167f;
+}
+.btn-style-two {
+    border: 1px solid #faaC1D;
+}
+.about-section .content-column .btn-box a {
+    border: 1px solid #1c94d2;
+}
+.btn-style-two {
+    border: 1px solid #faaC1D;
+}
+.pricing-block-two .btn-box a {
+    border: 1px solid #ec167f;
+}
+.banner-meetup .btn-box .theme-btn {
+    border: 1px solid #ec167f;
+}
+.about-section-two .content-column .btn-box a {
+    border: 1px solid #1c94d2;
+}
+.fluid-section-one .content-column .theme-btn {
+    border: 1px solid #24293d;
+}
+.btn-style-one {
+    border: 1px solid #ec167f;
+}
+.pricing-block-three .btn-box a {
+    border: 1px solid #ec167f;
+}
+.page-id-311 .pricing-section-two {
+    position: relative;
+    background-color: #fafafa;
+}
+.sidebar-page-container .sidebar.padding-left {
+    padding-left: 20px;
+}
+.sidebar-page-container .content-side, .sidebar-page-container .sidebar-side {
+    margin-bottom: 0px;
+}
+.news-section.alternate .news-block.col-lg-4 {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.page-template-blog_grid .news-section.alternate {
+    padding-bottom: 80px;
+}
+.sidebar .search-box {
+    margin-bottom: 40px;
+}
+.sidebar-widget {
+    position: relative;
+    margin-bottom: 40px;
+}
+.contact-form #contact-form  .form-group:nth-child(6) {
+    margin-bottom: 0px;
+}
+.elementor-lightbox .dialog-widget-content {
+    display: none;
+}
+.ticket-form .form-group input[type=checkbox] {
+    margin-right: 5px;
+}
+.sidebar-title {
+    font-size: 23px;
+    font-weight: 500;
+}
+.sidebar .popular-posts .post-info {
+    font-size: 14px;
+}
+.sidebar .popular-posts .post .text {
+    font-size: 16px;
+    font-weight: 500;
+}
+.news-block .text {
+    font-size: 16px;
+}
+.sidebar .popular-posts .post {
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 20px;
+}
+.testimonial-section {
+    background-color: #fafafa;
+}
+.blog-single .comments-area .comment-box {
+	position: relative;
+    font-size: 14px;
+    min-height: 120px;
+    padding: 25px 30px 30px 30px;
+    background-color: #f6f9ff;
+}
+.comments-area .comment {
+    position: relative;
+    min-height: 50px;
+    padding-left: 85px;
+}
+.comments-area .comment-box .author-thumb {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 60px;
+    width: 60px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #7d7d7d;
+}
+.app-section {
+    position: relative;
+    background-color: #fff;
+    padding: 90px 0;
+    z-index: 9;
+}
+.sidebar .search-box .form-group button {
+    color: #fff;
+    background: #ec167f;
+}
+.sidebar .popular-posts .post .post-thumb img {
+    border-radius: 50%;
+}
+.sidebar .popular-posts .post-info {
+    margin-bottom: 0px;
+    margin-top: 5px;
+	color: #ec167f;
+}
+.sidebar-title {
+    border-bottom: 0px solid #eeeeee;
+}
+.sidebar .popular-posts .post:last-child {
+    border-bottom: 0px solid #eeeeee;
+}
+.sidebar .search-box .form-group button:hover {
+    color: #fff;
+}
+.blog-categories li a span {
+    float: right;
+    width: 27px;
+    height: 27px;
+    display: inline-block;
+    background-color: #e8effb;
+    text-align: center;
+    line-height: 27px;
+    font-size: 12px;
+    color: #223543;
+    -webkit-text-fill-color: #223543;
+    -webkit-transition: all 0ms linear 0ms;
+    -khtml-transition: all 0ms linear 0ms;
+    -moz-transition: all 0ms linear 0ms;
+    -ms-transition: all 0ms linear 0ms;
+    -o-transition: all 0ms linear 0ms;
+    transition: all 0ms linear 0ms;
+}
+.blog-single .inner-box .video-box a.play-now {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 70px;
+    width: 70px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
+    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
+    -ms-box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
+    -o-box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
+    -webkit-animation: ripple 3s infinite;
+    -moz-animation: ripple 3s infinite;
+    -ms-animation: ripple 3s infinite;
+    -o-animation: ripple 3s infinite;
+    animation: ripple 3s infinite;
+}
+.blog-single .inner-box .video-box a.play-now .flaticon-play-button-3 {
+	padding-left: 0px;
+	top: 50%;
+    left: 50%;
+	background-color: #ec167f;
+	-webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
+    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
+    -ms-box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
+    -o-box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
+    -webkit-animation: ripple 3s infinite;
+    -moz-animation: ripple 3s infinite;
+    -ms-animation: ripple 3s infinite;
+    -o-animation: ripple 3s infinite;
+    animation: ripple 3s infinite;
+}
+.blog-single .inner-box .video-box {
+	margin-bottom: 30px;
+}
+.blog-single .inner-box .image-gallery {
+	margin-bottom: 30px;
+}
+.instagram-widget .image a:after {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 50%;
+    top: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 18px;
+    color: #f70068;
+    font-weight: 900;
+    content: "\f31e";
+    font-family: "Font Awesome 5 Free";
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+.blog-categories li.cat-item a:before {
+    content: '\f105';
+    margin-right: 8px;
+    color: #222222;
+    font-weight:600;
+	font-size: 12px;
+	font-family: "Font Awesome 5 Free";
+}
+.blog-categories li.cat-item a:hover {
+    padding-left: 23px;
+    color:#ec167f;
+}
+.blog-categories li a {
+    font-size: 16px;
+}
+.blog-categories li {
+    position: relative;
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 15px;
+}
+.blog-categories li:last-child  {
+    border-bottom: 0px solid #eeeeee;
+    margin-bottom: 0px;
+}
+.comments-area .group-title h3 {
+        margin-top: 20px;
+}
+.blog-single h2 {
+    margin-bottom: 20px;
+}
+.close-search .fa-window-close:before {
+    content: "\f410";
+}
+.newsletter-section {
+    background: #fafafa;
+}
+.speakers-section-three {
+    background: #fafafa;
+}
+.page-id-428 .newsletter-section {
+    background: #fff;
+}
+.comment-form .form-group{
+	padding-left: 0px;
+}
+h3.comment-reply-title{
+	margin-bottom:30px;
+	    position: relative;
+    display: inline-block;
+    font-size: 28px;
+    line-height: 1.2em;
+    color: #222222;
+    font-weight: 500;
+}
+.form-submit input.submit{
+	    position: relative;
+    padding: 10px 30px;
+    font-size: 16px;
+    line-height: 30px;
+    color: #ffffff;
+    font-weight: 400;
+    text-align: center;
+    background-color: #ec167f;
+    overflow: hidden;
+    border-radius: 4px;
+	position: relative;
+    padding: 10px 20px;
+    line-height: 20px;
+    font-size: 14px;
+	border: 1px solid #ec167f;
+}
+.form-submit input.submit:hover{
+	background:white;
+	color:#ec167f;
+}
+form .form-group p {
+    margin-bottom: 0px;
+}
