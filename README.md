@@ -1,0 +1,1 @@
+# eventrox-conference-and-event-wordpress-theme
